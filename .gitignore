@@ -1,1 +1,4 @@
 prompts.txt
+__pycache__/
+input.txt
+output.txt
