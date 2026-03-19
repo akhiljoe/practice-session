@@ -26,7 +26,7 @@ Explanation: [5, 5, 5] cost is 15 (> 14). [5, 2, 2] cost is 9 and time is 18.
 
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
 from utils import *
 
 class Solution():
@@ -39,7 +39,7 @@ class Solution():
 
 
 if __name__ == "__main__":
-    params = parse_input_file("input.txt")
+    params = parse_input_file()
 
     result = Solution().solve(params)
 

@@ -1,8 +1,38 @@
 # Find the length of the longest subarray where sum < 14
 
+# Example 1
+# Input : nums = [2, 1, 3, 4, 2, 1] , target = 14
+# Output : 5
+# Explanation : The longest subarray with sum < 14 is [2, 1, 3, 4, 2].
+# Its sum is 12 and length is 5.
+
+# Example 2
+# Input : nums = [5, 1, 2, 3, 1, 1, 1] , target = 7
+# Output : 4
+# Explanation : The longest subarray with sum < 7 is [2, 3, 1, 1].
+# Its sum is 7 (allowed since condition is > target to shrink), length is 4.
+
+# Example 3
+# Input : nums = [10, 2, 3] , target = 5
+# Output : 2
+# Explanation : The longest subarray with sum < 5 is [2, 3].
+# Its sum is 5 and length is 2.
+
+# Example 4
+# Input : nums = [1, 1, 1, 1, 1] , target = 3
+# Output : 3
+# Explanation : The longest subarray with sum < 3 is [1, 1, 1].
+# Its sum is 3 and length is 3.
+
+# Example 5
+# Input : nums = [4, 2, 2, 1, 1] , target = 6
+# Output : 3
+# Explanation : The longest subarray with sum < 6 is [2, 2, 1].
+# Its sum is 5 and length is 3.
+
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
 from utils import *
 from collections import deque
 
@@ -34,7 +64,7 @@ class Solution():
 
 
 if __name__ == "__main__":
-    params = parse_input_file("input.txt")
+    params = parse_input_file()
 
     result = Solution().solve(params)
 

@@ -22,10 +22,9 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
 from utils import *
 
-class Solution():
+class Solution:
     @measure
     def solve(self, params):
-        # extract inputs needed for this problem
         nums = params["nums"]
         k = params["k"]
 
@@ -45,8 +44,9 @@ class Solution():
             max_len = max(max_len,right-left+1)
         return max_len
 
+
 if __name__ == "__main__":
-    params = parse_input_file("input.txt")
+    params = parse_input_file()
 
     result = Solution().solve(params)
 

@@ -4,7 +4,11 @@ import time
 import tracemalloc
 from functools import wraps
 
-def parse_input_file(filename="input.txt"):
+BASE_DIR = "/home/addua/practice-session/"
+INPUT_FILE = BASE_DIR + "input.txt"
+OUTPUT_FILE = BASE_DIR + "output.txt"
+
+def parse_input_file(filename=INPUT_FILE):
     params = {}
 
     with open(filename, "r") as f:
@@ -42,5 +46,5 @@ def measure(func):
     return wrapper
 
 def write_output(result):
-    with open("output.txt", "w") as f:
+    with open(OUTPUT_FILE, "w") as f:
         f.write(str(result))

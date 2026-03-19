@@ -23,16 +23,14 @@ Input: candies = ["Sweet", "Sour", "Sweet", "Sour", "Sweet", "Sweet", "Sour", "S
 Output: 6
 Explanation: ["Sweet", "Sour", "Sweet", "Sour", "Sweet", "Sweet"] contains 2 "Sour" candies.
 """
-
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
 from utils import *
 
-class Solution():
+class Solution:
     @measure
     def solve(self, params):
-        # extract inputs needed for this problem
         candies = params["candies"]
         target = params["target"]
 
@@ -52,8 +50,9 @@ class Solution():
             maxlen = max(maxlen,right-left+1)
         return maxlen
 
+
 if __name__ == "__main__":
-    params = parse_input_file("input.txt")
+    params = parse_input_file()
 
     result = Solution().solve(params)
 
